@@ -1,6 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
-
+//NOTE: this was purposely all done in the main method, it is not best practice and was done to help someone out with their homework.
 public class SlotMachine {
 
 	public static void main(String[] args) {
