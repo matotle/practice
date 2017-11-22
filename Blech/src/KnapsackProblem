@@ -10,6 +10,7 @@ public class KnapsackProblem {
 		KnapsackProblem ksp = new KnapsackProblem(9);
 		ArrayList<Item> iList = new ArrayList<Item>();
 		// with Current Items Max value =25 for a weight of 9.
+		// Item class takes in value first, followed by weight
 		iList.add(ksp.new Item(20, 50));
 		iList.add(ksp.new Item(10, 4));
 		iList.add(ksp.new Item(8, 4));
