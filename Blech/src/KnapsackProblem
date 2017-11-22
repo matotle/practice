@@ -36,7 +36,7 @@ public class KnapsackProblem {
 	private int totalValue = 0;
 	private int totalWeight = 0;
 
-	// takes in weight capacity
+	//Constructor takes in weight capacity
 	public KnapsackProblem(int SackCapacity) {
 		this.SackCapacity = SackCapacity;
 	}
@@ -90,7 +90,6 @@ public class KnapsackProblem {
 			set.get(i).printItemValues();
 			i++;
 		}
-
 	}
 
 	// public getters for access outside class
@@ -104,7 +103,6 @@ public class KnapsackProblem {
 
 	public int getTotalValue() {
 		return totalValue;
-
 	}
 
 	// create item subclass to be fed into array.
@@ -116,29 +114,23 @@ public class KnapsackProblem {
 		private Item(int value, int weight) {
 			this.value = value;
 			this.weight = weight;
-
 		}
 
 		private void printItemValues() {
-			System.out
-					.println("| Value: " + value + " Weight: " + weight + " Value Ratio: " + ((double) value / weight));
-
+			System.out.println("| Value: " + value + " Weight: " + weight + " Value Ratio: " + ((double) value / weight));
 		}
 
 		// getters, technically not necssary but good practice for scope control.
 		private int getWeight() {
 			return weight;
-
 		}
 
 		private int getValue() {
 			return value;
-
 		}
 
 		private double getValueRatio() {
 			return (double) value / weight;
-
 		}
 	}
 
