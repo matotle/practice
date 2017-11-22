@@ -6,7 +6,7 @@ public class KnapsackProblem {
 
 	public static void main(String[] args) {
 
-		// define sack weight capacity with constructor
+		// define sack weight capacity
 		KnapsackProblem ksp = new KnapsackProblem(9);
 		ArrayList<Item> iList = new ArrayList<Item>();
 		// with Current Items Max value =25 for a weight of 9.
@@ -28,15 +28,15 @@ public class KnapsackProblem {
 
 		System.out.println("Taken Value: " + ksp.totalValue);
 		System.out.print("Taken Weight: " + ksp.totalWeight + "lbs out of a capacity of ");
-		System.out.println(ksp.getCapacity() + "lbs");	
-	}
+		System.out.println(ksp.getCapacity() + "lbs");
+	}// end main method
 
 	// Keep variables private for scope protection
 	private int SackCapacity;
 	private int totalValue = 0;
 	private int totalWeight = 0;
 
-	// Constructor takes in weight capacity
+	// takes in weight capacity
 	public KnapsackProblem(int SackCapacity) {
 		this.SackCapacity = SackCapacity;
 	}
@@ -48,7 +48,7 @@ public class KnapsackProblem {
 	public ArrayList<Item> SortandTake(ArrayList<Item> set) {
 		boolean mod = false;
 		int i = 0;
-		//recursive sort
+		// recursive sort
 		while (i < (set.size() - 1)) {
 
 			if (i < set.size() - 1 && set.get(i).getValueRatio() < set.get((i + 1)).getValueRatio()) {
@@ -59,18 +59,18 @@ public class KnapsackProblem {
 			}
 			i++;
 		}
-		//if anything was moved then do sort again
+		// if anything was moved then do sort again
 		if (mod) {
 			return SortandTake(set);
 		} else {
-			//begin taking items after sorted
+			// begin taking items after sorted
 			int cap = SackCapacity;
 			ArrayList<Item> set2 = new ArrayList<Item>();
 			int j = 0;
 			while (j < (set.size() - 1)) {
 				if (set.get(j).getWeight() <= cap) {
 					set2.add(set.get(j));
-
+					// decriment the remaining weight and incriment the value
 					cap = cap - set.get(j).getWeight();
 					totalValue = totalValue + set.get(j).getValue();
 					totalWeight = totalWeight + set.get(j).getWeight();
@@ -109,8 +109,8 @@ public class KnapsackProblem {
 
 	// create item subclass to be fed into array.
 	private class Item {
-		int weight;
-		int value;
+		private int weight;
+		private int value;
 
 		// create constructor
 		private Item(int value, int weight) {
