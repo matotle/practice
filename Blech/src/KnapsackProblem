@@ -27,8 +27,8 @@ public class KnapsackProblem {
 		ksp.displayArray(ksp.SortandTake(iList));
 
 		System.out.println("Taken Value: " + ksp.totalValue);
-		System.out
-				.println("Taken Weight: " + ksp.totalWeight + "lbs out of a capacity of " + ksp.getCapacity() + "lbs");
+		System.out.print("Taken Weight: " + ksp.totalWeight + "lbs out of a capacity of ");
+		System.out.println(ksp.getCapacity() + "lbs");	
 	}
 
 	// Keep variables private for scope protection
