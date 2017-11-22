@@ -6,7 +6,7 @@ public class KnapsackProblem {
 
 	public static void main(String[] args) {
 
-		// define sack weight capacity
+		// define sack weight capacity with constructor
 		KnapsackProblem ksp = new KnapsackProblem(9);
 		ArrayList<Item> iList = new ArrayList<Item>();
 		// with Current Items Max value =25 for a weight of 9.
@@ -36,7 +36,7 @@ public class KnapsackProblem {
 	private int totalValue = 0;
 	private int totalWeight = 0;
 
-	// takes in weight capacity
+	// Constructor takes in weight capacity
 	public KnapsackProblem(int SackCapacity) {
 		this.SackCapacity = SackCapacity;
 	}
