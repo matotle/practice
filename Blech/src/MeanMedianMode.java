@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class MeanMedianMode {
+	
 
 	public static void main(String[] args) {
 
